@@ -1,45 +1,57 @@
 html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-  }
-  
-  * {
+    overflow-x: hidden;
+    user-select: none;
+    /* Standard property */
+    -webkit-user-select: none;
+    /* Chrome, Safari, and Opera */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+
+
+}
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
-  }
-  
-  body {
+}
+
+body {
     background-color: #0c0c1d;
     color: lightgray;
-  }
-  
-  a {
+}
+
+a {
     text-decoration: none;
     color: inherit;
-  }
-  
-  section {
+}
+
+section {
     height: 100vh;
     width: 100vw;
     scroll-snap-align: center;
     overflow: hidden;
-  }
-  
-  @mixin mobile {
+}
+
+@mixin mobile {
     @media (max-width: 738px) {
-      @content;
+        @content;
     }
-  }
-  @mixin tablet {
+}
+
+@mixin tablet {
     @media (max-width: 1024px) {
-      @content;
+        @content;
     }
-  }
-  @mixin desktop {
+}
+
+@mixin desktop {
     @media (max-width: 1366px) {
-      @content;
+        @content;
     }
-  }
-  
+}

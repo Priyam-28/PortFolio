@@ -1,90 +1,108 @@
 @import "../../app.scss";
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
 
 .parallax {
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
   overflow: hidden;
+  background: linear-gradient(180deg, #011825, #0C0C1D);
 
-  h1 {
-    font-size: 100px;
-    z-index: 3;
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .description {
+    z-index: 10;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    text-align: left;
 
     @include mobile {
-      font-size: 72px;
+      position: relative;
+      top: auto;
+      left: auto;
       text-align: center;
+      width: 100%;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    h1 {
+      font-size: 30px;
+      z-index: 10;
+      color: #F1C6A9;
+      font-family: "Teachers", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+
+      @include mobile {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .spaceman {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5;
+
+    @include mobile {
+      position: relative;
+      width: 100%;
+      height: 50%;
+      order: -1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      background-image: url("/stars.png");
+
+    }
+  }
+
+  .mountains,
+  .mountains2,
+  .planets,
+  .stars {
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    @include mobile {
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 
   .mountains {
-    background-image: url("/crater.svg");
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 3;
-
-    @include mobile {
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
+    z-index: 4;
   }
+
   .mountains2 {
-    background-image: url("/mountain2.svg");
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
     z-index: 2;
+    background-image: url("/crater.svg");
+  }
 
-    @include mobile {
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-  }
-  .spaceman{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 99;
-  }
   .planets {
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
     z-index: 2;
-    @include mobile {
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
   }
+
   .stars {
-    background-image: url("/stars.png");
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
     z-index: 1;
-  }
-  
-}
- .planets {
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
     height: 100%;
-    position: absolute;
-    z-index: 2;
-    @include mobile {
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
+    background-image: url("/stars.png");
   }
+}

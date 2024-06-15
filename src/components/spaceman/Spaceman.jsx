@@ -34,6 +34,8 @@ const InteractiveSpaceman = ({ scrollContainer, scale, position }) => {
   const { size } = useThree();
   const isDraggingRef = useRef(false);
   const previousMouseXRef = useRef(0);
+  const isTouchingRef = useRef(false);
+  const previousTouchXRef = useRef(0);
 
   useEffect(() => {
     const handleMouseDown = (event) => {
@@ -53,40 +55,63 @@ const InteractiveSpaceman = ({ scrollContainer, scale, position }) => {
       isDraggingRef.current = false;
     };
 
+    const handleTouchStart = (event) => {
+      isTouchingRef.current = true;
+      previousTouchXRef.current = event.touches[0].clientX;
+    };
+
+    const handleTouchMove = (event) => {
+      if (isTouchingRef.current) {
+        const deltaX = event.touches[0].clientX - previousTouchXRef.current;
+        setRotationY((prevRotationY) => prevRotationY + deltaX * 0.01);
+        previousTouchXRef.current = event.touches[0].clientX;
+      }
+    };
+
+    const handleTouchEnd = () => {
+      isTouchingRef.current = false;
+    };
+
     window.addEventListener("mousedown", handleMouseDown);
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseup", handleMouseUp);
+    window.addEventListener("touchstart", handleTouchStart);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchend", handleTouchEnd);
 
     return () => {
       window.removeEventListener("mousedown", handleMouseDown);
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchend", handleTouchEnd);
     };
   }, [size.width, size.height]);
 
-  return <Spaceman rotationY={rotationY + Math.PI} scale={scale} position={position} />; // Added Math.PI to the initial rotationY
+  return <Spaceman rotationY={rotationY + Math.PI} scale={scale} position={position} />;
 };
 
 const SpacemanCanvas = ({ scrollContainer }) => {
-  const [scale, setScale] = useState([2.2, 2.2, 2.2]); // Increased scale values
+  const [scale, setScale] = useState([3.5, 3.5, 3.5]);
   const [position, setPosition] = useState([0.2, -0.7, 0]);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
-        setScale([1.5, 1.5, 1.5]); // Increased scale values for smaller screens
+        setScale([1.2, 1.2, 1.2]);
         setPosition([0.2, -0.1, 0]);
       } else if (window.innerWidth < 1024) {
-        setScale([2, 2, 2]); // Increased scale values for medium screens
+        setScale([1.5, 1.5, 1.5]);
         setPosition([0.2, -0.3, 0]);
       } else if (window.innerWidth < 1280) {
-        setScale([2.5, 2.5, 2.5]); // Increased scale values for larger screens
+        setScale([2, 2, 2]);
         setPosition([0.2, -0.4, 0]);
       } else if (window.innerWidth < 1536) {
-        setScale([2.2, 2.2, 2.2]); // Increased scale values for even larger screens
+        setScale([2.5,2.5,2.5]);
         setPosition([0.2, -0.5, 0]);
       } else {
-        setScale([3.5, 3.5, 3.5]); // Increased scale values for the largest screens
+        setScale([2.5,2.5,2]);
         setPosition([0.2, -0.7, 0]);
       }
     };
@@ -100,7 +125,7 @@ const SpacemanCanvas = ({ scrollContainer }) => {
   }, []);
 
   return (
-    <Canvas className="canva" camera={{ near: 0.1, far: 1000 }}>
+    <Canvas className="canva" camera={{ near: 0.1, far: 2000 }}>
       <Suspense fallback={<CanvasLoader />}>
         <directionalLight position={[1, 1, 1]} intensity={2} />
         <ambientLight intensity={0.5} />
