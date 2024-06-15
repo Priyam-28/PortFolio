@@ -14,11 +14,17 @@ html {
 
 }
 
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
+    
 }
 
 body {
@@ -29,6 +35,14 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+.nav{
+    
+    position:fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+
 }
 
 section {

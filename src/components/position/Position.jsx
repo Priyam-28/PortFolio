@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './position.scss';
 
-const titles = ["web developer", "gamer", "content creator"];
+const titles = ["Web Developer", "Casual Gamer", "Robotics Enthusiast" ];
 
 const Position = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
@@ -10,7 +10,7 @@ const Position = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTitle((prevTitle) => (prevTitle + 1) % titles.length);
-    }, 3000); // Change every 3 seconds
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 

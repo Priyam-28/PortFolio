@@ -20,7 +20,7 @@
   .description {
     z-index: 10;
     position: absolute;
-    top: 35%;
+    top: 15%;
     left: 10%;
     text-align: left;
 
@@ -35,9 +35,9 @@
     }
 
     h1 {
-      font-size: 30px;
+      font-size: 4rem;
       z-index: 10;
-      color: #F1C6A9;
+      color: #F45915;
       font-family: "Teachers", sans-serif;
       font-optical-sizing: auto;
       font-weight: 800;
@@ -98,6 +98,8 @@
 
   .planets {
     z-index: 2;
+    background-image: url("/planets.png");
+
   }
 
   .stars {

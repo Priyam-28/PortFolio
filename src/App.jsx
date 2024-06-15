@@ -7,8 +7,11 @@ import Navbar from "./components/navbar/Navbar";
 const App = () => {
   return (
     <div>
+      <div className="nav">
       <Navbar/>
-      <section >
+      </div>
+      
+      <section>
         <Parallax />
       </section>
       <Portfolio/>

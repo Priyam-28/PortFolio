@@ -5,44 +5,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    color: #fff;
-    font-family: 'Arial, sans-serif';
-    font-size: 2rem;
-    font-weight: bold;
+    color: #4BC5C0;
+    font-size: 1.5rem;
     position: relative;
     overflow: hidden;
-  
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
     @media (min-width: 576px) {
-      font-size: 2.5rem;
+        font-size: 2.5rem;
     }
-  
+
     @media (min-width: 768px) {
-      font-size: 3rem;
+        font-size: 3rem;
     }
-  
+
     @media (min-width: 1024px) {
-      font-size: 3.5rem;
+        font-size: 3.5rem;
     }
-  
+
     @media (min-width: 1536px) {
-      font-size: 4rem;
+        font-size: 4rem;
     }
-  }
-  
-  .position-text {
+}
+
+.position-text {
     display: inline-block;
     overflow: hidden;
-    
-  
+
+
     span {
-      display: inline-block;
-      white-space: nowrap;
+        display: inline-block;
+        white-space: nowrap;
     }
-  
+
     .title {
-      display: inline-block;
-      white-space: nowrap;
+        display: inline-block;
+        white-space: nowrap;
     }
-  }
-  
+}

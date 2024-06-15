@@ -29,7 +29,7 @@ const Spaceman = ({ scale, position, rotationY }) => {
   );
 };
 
-const InteractiveSpaceman = ({ scrollContainer, scale, position }) => {
+const InteractiveSpaceman = ({  scale, position }) => {
   const [rotationY, setRotationY] = useState(0);
   const { size } = useThree();
   const isDraggingRef = useRef(false);

@@ -1,8 +1,13 @@
 @import "../../app.scss";
 
-.navbar{
-    position: sticky;
-    right: 0;
-    top: 0;
-    z-index: 99;
+.navbar ul{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+li{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
 }
