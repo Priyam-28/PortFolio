@@ -3,6 +3,7 @@ import "./app.scss";
 import Portfolio from "./components/projects/Portfolio";
 import Contact from "./components/contact/Contact";
 import Navbar from "./components/navbar/Navbar";
+import Experience from "./components/experience/Experience";
 
 const App = () => {
   return (
@@ -13,6 +14,9 @@ const App = () => {
       
       <section>
         <Parallax />
+      </section>
+      <section>
+        <Experience/>
       </section>
       <Portfolio/>
       <section >

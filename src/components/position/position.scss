@@ -1,6 +1,5 @@
 @import "../../app.scss";
 
-
 .position-container {
     display: flex;
     justify-content: center;
@@ -35,10 +34,8 @@
     display: inline-block;
     overflow: hidden;
 
-
-    span {
+    .fixed-text {
         display: inline-block;
-        white-space: nowrap;
     }
 
     .title {

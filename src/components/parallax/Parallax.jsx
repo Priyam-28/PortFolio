@@ -3,8 +3,9 @@ import { useRef } from "react";
 import "./parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import SpacemanCanvas from "../spaceman/Spaceman";
-import Position from "../position/Position";
+
 import StarsCanvas from "../Stars/Stars";
+import Position from "../position/Position";
 
 const Parallax = () => {
   const ref = useRef();
@@ -24,8 +25,9 @@ const Parallax = () => {
       </motion.div>
       <div className="description">
         <motion.h1 style={{ y: yText }} className="name">
-          Hi, I am Priyam <br />
+          Hi, I am Priyam <br /> 
           <Position/>
+          
         </motion.h1>
       </div>
       <StarsCanvas className='stars'/>

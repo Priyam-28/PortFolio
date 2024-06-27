@@ -108,7 +108,7 @@ const SpacemanCanvas = ({ scrollContainer }) => {
         setScale([2, 2, 2]);
         setPosition([0.2, -0.4, 0]);
       } else if (window.innerWidth < 1536) {
-        setScale([2.5,2.5,2.5]);
+        setScale([2.2,2.2,2.2]);
         setPosition([0.2, -0.5, 0]);
       } else {
         setScale([2.5,2.5,2]);
