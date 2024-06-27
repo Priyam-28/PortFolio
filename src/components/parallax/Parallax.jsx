@@ -4,6 +4,7 @@ import "./parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import SpacemanCanvas from "../spaceman/Spaceman";
 import Position from "../position/Position";
+import StarsCanvas from "../Stars/Stars";
 
 const Parallax = () => {
   const ref = useRef();
@@ -27,6 +28,7 @@ const Parallax = () => {
           <Position/>
         </motion.h1>
       </div>
+      <StarsCanvas className='stars'/>
       <motion.div className="mountains"></motion.div>
       <motion.div className="mountains2" style={{ y: yBg }}></motion.div>
       <motion.div className="planets" style={{ y: yBg }}></motion.div>

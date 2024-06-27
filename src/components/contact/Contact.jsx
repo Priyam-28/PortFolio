@@ -3,6 +3,7 @@ import "./contact.scss";
 import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
+
 const variants = {
   initial: {
     y: 500,
@@ -47,6 +48,7 @@ const Contact = () => {
   };
 
   return (
+    
     <motion.div
       ref={ref}
       className="contact"
@@ -54,6 +56,7 @@ const Contact = () => {
       initial="initial"
       whileInView="animate"
     >
+      
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Let’s work together</motion.h1>
         <motion.div className="item" variants={variants}>

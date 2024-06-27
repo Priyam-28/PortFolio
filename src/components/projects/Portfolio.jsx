@@ -11,9 +11,9 @@ const items = [
   },
   {
     id: 2,
-    title: "Next.js Blog",
+    title: "Task Topia",
     img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    desc: "The Prompt Sharing Platform is a user-friendly web application enabling creative writers to generate, modify, and exchange writing prompts effortlessly. Integrated with Google authentication via NextAuth.js, it offers personalized profiles for users to manage their prompts conveniently. With MongoDB for data storage and Tailwind CSS for styling, it",
   },
   {
     id: 3,
