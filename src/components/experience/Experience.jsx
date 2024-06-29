@@ -1,19 +1,18 @@
+/* eslint-disable react/prop-types */
   
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-
 import "react-vertical-timeline-component/style.min.css";
-
-
 import { experiences } from "../../constants";
 import { textVariant } from "../../utils/motion";
 import "./experience.scss";
 
 const ExperienceCard = ({ experience }) => {
   return (
+    
     <VerticalTimelineElement
       contentStyle={{
         background: "#1d1836",
@@ -53,7 +52,7 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} id="experience">
         <p className="section-sub-text text-center">
           What I have done so far
         </p>

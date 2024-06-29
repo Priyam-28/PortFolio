@@ -1,24 +1,29 @@
-import React from 'react';
-import { Typewriter } from 'react-simple-typewriter';
-import './position.scss';
 
-const titles = ["Web Developer", "Casual Gamer", "Robotics Enthusiast"];
+import { Cursor, Typewriter } from "react-simple-typewriter";
+
 
 const Position = () => {
+
+
   return (
-    <div className="position-container">
-      <div className="position-text">
-        <span className="fixed-text">I am&nbsp;</span>
-        <Typewriter
-          words={titles}
-          loop={true}
-          cursor
-          cursorStyle='_'
-          typeSpeed={70}
-          deleteSpeed={50}
-          delaySpeed={1000}
-        />
-      </div>
+    <div className='App'>
+      <h1 style={{ fontWeight: 'bold', color:'#4BC5C0' }}>
+        I am a{' '}
+        <span style={{ color: '#F55F17', fontWeight: 'bolder' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={["Developer","Casual Gamer","Robotics Enthusiast" ]}
+            loop={1000}
+            typeSpeed={90}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          
+          />
+        </span>
+        <span>
+          <Cursor cursorColor="|" cursorBlinking/>
+        </span>
+      </h1>
     </div>
   );
 };

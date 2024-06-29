@@ -57,6 +57,7 @@ const Contact = () => {
       variants={variants}
       initial="initial"
       whileInView="animate"
+      id="contact"
     >
       
       <motion.div className="textContainer" variants={variants}>

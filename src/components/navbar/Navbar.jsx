@@ -1,17 +1,35 @@
+import { Link } from 'react-scroll'
 import './navbar.scss'
 
 const Navbar = () => {
   return (
     <div className='navbar'>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Experience</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Contact</a></li>
+      <ul>
+        <li>
+        <Link to="home" smooth={true} duration={500}>
+          Home
+        </Link>
+        </li>
+        
+        <li>
+          <Link to="experience" smooth={true} duration={500}>
+            Experience
+          </Link>
+        </li>
+        <li>
+          <Link to="projects" smooth={true} duration={500}>
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link to="contact" smooth={true} duration={500}>
+            Contact 
+          </Link>
+        </li>
 
-            
-        </ul>
-      
+
+      </ul>
+
     </div>
   )
 }

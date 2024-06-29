@@ -19,7 +19,7 @@ const Parallax = () => {
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   return (
-    <div className="parallax" ref={ref}>
+    <div className="parallax" ref={ref} id="home">
       <motion.div className="spaceman">
         <SpacemanCanvas />
       </motion.div>

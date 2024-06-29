@@ -52,6 +52,14 @@ section {
     overflow: hidden;
 }
 
+.experience{
+    height: fit-content;
+    width: 100vw;
+    scroll-snap-align:center ;
+    overflow: hidden;
+
+}
+
 @mixin mobile {
     @media (max-width: 738px) {
         @content;

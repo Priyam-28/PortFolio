@@ -15,9 +15,11 @@ const App = () => {
       <section>
         <Parallax />
       </section>
-      <section>
-        <Experience/>
+      <section className="experience">
+      <Experience/>
       </section>
+        
+      
       <Portfolio/>
       <section >
         <Contact />
