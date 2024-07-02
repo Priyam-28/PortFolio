@@ -4,6 +4,7 @@ import Portfolio from "./components/projects/Portfolio";
 import Contact from "./components/contact/Contact";
 import Navbar from "./components/navbar/Navbar";
 import Experience from "./components/experience/Experience";
+import Social from "./components/social/Social";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
       <section >
         <Contact />
       </section>
+      <Social className="social"/>
     </div>
   )
 }

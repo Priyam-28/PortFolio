@@ -4,7 +4,7 @@ const experiences = [
       company_name: "Conatus Bharat",
       icon: 'Logo_Conatus.png',
       iconBg: "#383E56",
-      date: "June 2020 - August 6, 2024",
+      date: "July 2024 - August 6, 2024",
       points: [
         "Developing and maintaining web applications using React.js with MongoDB and Prisma.",
         "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -17,7 +17,7 @@ const experiences = [
       company_name: "Dreadnought Robotics",
       icon: 'DNT.jpeg',
       iconBg: "#E6DEDD",
-      date: "May 2023 - Present",
+      date: "May 2024 - Present",
       points: ["As part of the programming department, I focus on developing Autonomous Underwater Vehicles (AUVs) utilizing Robot Operating System (ROS) and OpenCV." ,
         "My role involves designing and implementing software solutions for AUV navigation, perception, and control. I work on integrating sensors and cameras to enable the AUVs to perceive their underwater environment, process visual data, and make intelligent decisions.",
         
@@ -29,7 +29,7 @@ const experiences = [
       company_name: "Bionary Club",
       icon:"Bionary.jpeg",
       iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
+      date: "Jan 2023 - May 2023",
       points: [
         "Developed and optimized responsive web interfaces using HTML, CSS, JavaScript, and React.js.",
         "Collaborated with designers to implement visually appealing UI/UX, ensuring cross-browser compatibility.",

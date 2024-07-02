@@ -5,6 +5,7 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    font-family: "Teachers", sans-serif;
   }
  
   .experience h2{
@@ -37,38 +38,34 @@
   }
   
   .experience-title {
+    font-family: "Teachers", sans-serif;
     color: #fff;
     font-size: 24px;
     font-weight: bold;
   }
   
   .experience-company {
-    color: #888;
+    font-family: "Teachers", sans-serif;
     font-size: 16px;
     font-weight: 600;
   }
   
   .experience-points {
+    font-family: "Teachers", sans-serif;
     margin-top: 20px;
     list-style-type: disc;
     margin-left: 20px;
+    
   
     li {
-      color: #bbb;
+      color: #f3eeee;
       font-size: 14px;
       padding-left: 4px;
       letter-spacing: wider;
     }
   }
   
-  /* Additional styles */
-  .section-sub-text {
-    /* Add your styles for sectionSubText */
-  }
-  
-  .section-head-text {
-    /* Add your styles for sectionHeadText */
-  }
+ 
   
   .text-center {
     text-align: center;

@@ -1,0 +1,58 @@
+@import "../../app.scss";
+.social-media-tray {
+    position: fixed;
+    top: 100px; /* 100px from the top */
+    right: 20px; /* 20px from the right */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align items to the right */
+    width: 60px; /* Adjust width as needed */
+    padding: 10px; /* Add padding around icons */
+    background-color: #f8f9fa; /* Background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for elevation */
+  }
+  
+  .social-icon {
+    font-size: 24px; /* Adjust icon size */
+    color: #333; /* Icon color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    margin-bottom: 10px; /* Space between icons */
+  }
+  
+  .social-icon:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
+  .resume-button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+  }
+  
+  .resume-button:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+  
+  .resume-button .social-icon {
+    font-size: 20px; /* Adjust icon size */
+    color: #fff; /* Icon color */
+  }
+  
+  .resume-button:hover .social-icon {
+    color: #f8f9fa; /* Change icon color on hover */
+  }
+  
+  .social-media-tray a,
+  .social-media-tray button {
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  
