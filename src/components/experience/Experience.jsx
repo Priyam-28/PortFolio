@@ -53,11 +53,9 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()} id="experience">
-        <p className="section-sub-text text-center">
-          What I have done so far
-        </p>
-        <h2 className="section-head-text text-center">
-          Work Experience.
+        
+        <h2>
+          Work Experience
         </h2>
       </motion.div>
 

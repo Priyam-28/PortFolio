@@ -1,9 +1,25 @@
 @import "../../app.scss";
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
 
 .experience-container {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+  }
+ 
+  .experience h2{
+    position: relative;
+    left: 60px;
+    padding: 50px;
+    color: #EF973F;
+    font-size: 39px;
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+
+    @include mobile{
+      font-size: xx-large;
+    }
   }
   
   .experience-icon-container {
