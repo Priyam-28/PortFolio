@@ -1,5 +1,5 @@
-import { FaTwitter, FaLinkedin, FaFilePdf, FaGithub } from 'react-icons/fa';
-import './social.scss'; // Import your CSS file for styling
+import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import './social.scss';
 
 const Social = () => {
   

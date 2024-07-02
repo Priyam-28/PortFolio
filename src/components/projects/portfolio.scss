@@ -5,6 +5,10 @@
   background: #081121;
   padding: 70px;
   font-family: "Teachers", sans-serif;
+  
+  @include mobile{
+    padding: 0
+  }
 
   .progress {
     position: sticky;
