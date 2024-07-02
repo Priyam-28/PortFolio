@@ -2,25 +2,31 @@
 import { useRef } from "react";
 import "./portfolio.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { FaCode } from "react-icons/fa";
 
 const items = [
   {
     id: 1,
-    title: "React Commerce",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Instagram Clone",
+    img: "instagram1.png",
+    desc: "Created an Instagram Clone using React for the frontend, Firestore for database management, and Firebase Zustand for state management. The app mimics core Instagram functionalities like posting, liking, and commenting, with real-time updates and user authentication for a seamless social media experience.",
+    url:"https://insta-clone-kappa-pearl.vercel.app/",
+    code:"https://github.com/Priyam-28/InstaClone"
   },
   {
     id: 2,
     title: "Task Topia",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "The Prompt Sharing Platform is a user-friendly web application enabling creative writers to generate, modify, and exchange writing prompts effortlessly. Integrated with Google authentication via NextAuth.js, it offers personalized profiles for users to manage their prompts conveniently. With MongoDB for data storage and Tailwind CSS for styling, it",
+    img: "tasktopia.png",
+    desc: "Built a comprehensive task management application using Firebase for real-time database capabilities and Next.js for a fast and responsive front-end. The app allows users to create, prioritize, and track tasks with dynamic updates across devices. Features include user authentication, task categorization, and intuitive UI/UX design for enhanced productivity and collaboration.",
+    url:"https://tasktopia-jy1l-qbgd7nlgx-priyams-projects-da13d4ec.vercel.app/",
+    code:"https://github.com/Priyam-28/Tasktopia"
   },
   {
     id: 3,
-    title: "Vanilla JS App",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "2D Mapping Bot",
+    img: "mapping.jpg",
+    desc: "Developed a 2D mapping robot integrating Arduino for hardware control, Python for real-time data processing, and ultrasonic sensors for accurate spatial mapping. The bot autonomously navigates and maps its surroundings, employing sensor data to create detailed 2D maps, enhancing navigation and obstacle avoidance capabilities.",
+    code:"https://github.com/Priyam-28/Room-Mapping-Vehicle"
   },
   {
     id: 4,
@@ -44,12 +50,16 @@ const Single = ({ item }) => {
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
-            <img src={item.img} alt="" />
+            <img src={item.img} alt={item.title} />
           </div>
-          <motion.div className="textContainer" style={{y}}>
+          <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+          
+          <div className="buttonContainer">
+              <a href={item.url} className="demoButton">See Demo</a>
+              <a href={item.code} className="codeLink"><FaCode /></a>
+            </div>
           </motion.div>
         </div>
       </div>
