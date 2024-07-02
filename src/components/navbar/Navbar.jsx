@@ -1,37 +1,37 @@
-import { Link } from 'react-scroll'
-import './navbar.scss'
+import Sidebar from "../sidebar/Sidebar";
+import "./navbar.scss";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <div className='navbar'>
-      <ul>
-        <li>
-        <Link to="home" smooth={true} duration={500}>
-          Home
-        </Link>
-        </li>
-        
-        <li>
-          <Link to="experience" smooth={true} duration={500}>
-            Experience
-          </Link>
-        </li>
-        <li>
-          <Link to="projects" smooth={true} duration={500}>
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link to="contact" smooth={true} duration={500}>
-            Contact 
-          </Link>
-        </li>
-
-
-      </ul>
-
+    <div className="navbar">
+      {/* Sidebar */}
+      <Sidebar/>
+      <div className="wrapper">
+        <motion.span
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          Lama Dev
+        </motion.span>
+        <div className="social">
+          <a href="#">
+            <img src="/facebook.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="/instagram.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="/youtube.png" alt="" />
+          </a>
+          <a href="#">
+            <img src="/dribbble.png" alt="" />
+          </a>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

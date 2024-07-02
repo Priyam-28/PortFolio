@@ -30,7 +30,7 @@ const Spaceman = ({ scale, position, rotationY }) => {
 };
 
 const InteractiveSpaceman = ({  scale, position }) => {
-  const [rotationY, setRotationY] = useState(0);
+  const [rotationY, setRotationY] = useState(-Math.PI / 4);
   const { size } = useThree();
   const isDraggingRef = useRef(false);
   const previousMouseXRef = useRef(0);
