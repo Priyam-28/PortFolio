@@ -17,21 +17,26 @@
       padding: 20px;
     }
 
-    span {
-      font-weight: bold;
+    .title-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px; // Adjust the gap between text and logo as needed
 
       @include mobile {
-        display: none;
+        .title {
+          display: none;
+        }
       }
-    }
 
-    .social {
-      display: flex;
-      gap: 20px;
+      .title {
+        font-weight: bold;
+      }
 
-      img {
-        width: 18px;
-        height: 18px;
+      .logo {
+        height: 50px;
+        width: 50px; // Ensure the logo is square
+        background: #5fd7d3d1;
+        border-radius: 50%;
       }
     }
   }

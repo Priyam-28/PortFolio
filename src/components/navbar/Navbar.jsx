@@ -7,14 +7,15 @@ const Navbar = () => {
     <div className="navbar">
       <Sidebar/>
       <div className="wrapper">
-        <motion.span
+        <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
+          className="title-logo"
         >
-          D S PRIYAM
-        </motion.span>
-        
+          <span className="title">D S PRIYAM</span>
+          <img src="logoface.png" className="logo" alt="Logo" />
+        </motion.div>
       </div>
     </div>
   );
